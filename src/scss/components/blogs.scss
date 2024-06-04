@@ -1,0 +1,284 @@
+.blog-card__text h4 {
+  font-size: 28px;
+  color: $color-primary;
+
+  @include laptop {
+    font-size: 36px;
+  }
+
+  @include desktop-l {
+    font-size: 48px;
+  }
+}
+
+.blog-card__text p {
+  color: $color-white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.blog-card__text-header p:first-child {
+  font-size: 16px;
+  color: $color-white;
+  margin-bottom: 12px;
+  font-weight: 300;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.blogs {
+  background-color: $color-secondary;
+
+  @include desktop {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.blogs__cards-list li {
+  width: 100%;
+
+  @include laptop {
+    width: 45%;
+  }
+}
+
+.blog-card__text-header {
+  gap: 16px;
+}
+.blog-card__text-header p {
+  color: $color-primary;
+  margin-bottom: 0;
+}
+
+.blog-card__text-header p:last-child {
+  font-family: $font-secondary;
+  font-weight: 700;
+  color: $color-primary;
+  font-size: 16px;
+
+  @include tablet {
+    font-size: 18px;
+  }
+}
+
+.blogs__cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 70px;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 110px 60px;
+    margin-bottom: 145px;
+  }
+}
+
+.blog-card__text-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blogs__cards-list li:nth-child(2) {
+  @include laptop {
+    width: 45%;
+    position: relative;
+    top: 110px;
+  }
+}
+
+.blogs__cards-list li:nth-child(3) {
+  @include laptop {
+    width: 35%;
+  }
+}
+
+.blogs__cards-list li:nth-child(4) {
+  @include laptop {
+    position: relative;
+    top: 110px;
+    width: 55%;
+  }
+}
+
+.blogs-card {
+  display: block;
+}
+
+.blogs-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 500px;
+  margin-bottom: 20px;
+
+  @include laptop {
+    margin-bottom: 40px;
+  }
+}
+
+.blogs__cards-list li:nth-child(3) .blogs-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @include laptop {
+    min-height: 647px;
+  }
+}
+
+.blogs__cards-list li:nth-child(3) .blogs-card {
+  @include laptop {
+    max-width: 536px;
+    max-height: 647px;
+  }
+}
+
+.blogs__cards-list li:nth-child(4) .blogs-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @include laptop {
+    height: 450px;
+  }
+}
+
+.blogs__cards-list li:nth-child(5) {
+  @include laptop {
+    position: relative;
+    top: 90px;
+  }
+}
+
+.blogs__cards-list li:nth-child(5) .blogs-card img {
+  @include laptop {
+    max-height: 500px;
+    margin-bottom: 40px;
+  }
+}
+
+.blogs__cards-list li:nth-child(2) .blogs-card img,
+.blogs__cards-list li:nth-child(5) .blogs-card img {
+  max-height: 500px;
+}
+
+.blogs__cards-list li:nth-child(6) {
+  @include laptop {
+    position: relative;
+    top: 100px;
+  }
+}
+
+.blogs__cards-list li:nth-child(6) .blogs-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @include laptop {
+    max-height: 658px;
+  }
+}
+
+.pagination-link {
+  font-family: $font-secondary;
+  color: $color-white;
+  font-weight: 700;
+  font-size: 30px;
+  text-decoration: none;
+  position: relative;
+  width: 46px;
+  height: 46px;
+  font-size: 24px;
+  border-radius: 50%;
+  border: 3px solid $color-white;
+  line-height: 1.7;
+  display: block;
+  text-align: center;
+  flex-shrink: 0;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+}
+
+.pagination-link.is-active {
+  width: 62px;
+  height: 62px;
+  font-size: 32px;
+  color: $color-primary;
+  border-color: $color-primary;
+}
+
+.pagination {
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  @include laptop {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.pagination__pages {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  @include laptop {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.pagination-list {
+  display: flex;
+}
+
+.pagination-list li:not(:last-child) {
+  margin-right: 32px;
+}
+
+.pagination h4 {
+  color: $color-primary;
+  font-size: 26px;
+  margin-bottom: 20px;
+
+  @include laptop {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
+
+.pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-link-left {
+  color: $color-white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+  align-items: center;
+  margin-top: 20px;
+
+  @include laptop {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: right;
+  }
+}

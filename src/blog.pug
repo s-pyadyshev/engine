@@ -1,0 +1,66 @@
+extends pug/base
+
+prepend vars
+  - title = 'Blogs'
+
+append vars
+
+block content
+  +page-header(
+      'Blogs',
+      '',
+      '',
+      false,
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 40" width="126" height="46" data-scrollspy><path d="M93.29 41.55c-27.12-.27-57.94.1-82.34-13.59C5.59 24.95-1.28 19.33.92 12.32 3.36 4.58 14.58 4.01 21.2 3.07 36 .92 50.96.12 65.9.67c7.75.3 15.48 1.04 23.14 2.22 6.51 1 13.75 1.82 19.57 5.11 6.38 3.61 8.76 10.73 3.94 16.83-5.28 6.68-16.87 8.12-24.74 9.5a139.526 139.526 0 0 1-45 .53c-7.32-1.09-14.54-2.76-21.59-4.99-5.18-1.65-13.9-4.09-14.87-10.56C4.96 9.95 20.63 7.96 26.94 6.48c8.51-1.99 17.14-3.41 25.84-4.25C70.26.57 87.89 1.19 105.21 4.08" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/></svg>'
+    ).page-header--image.mb-0
+  article.blog
+    .container 
+      .blog__header
+        .blog__header-inner-left
+            h1 Toekomstmuziek 
+            p Mogen we ooit nog mopperen?
+            p Geschreven door: Irene
+        .blog__header-inner-right
+          p Leestijd: 4 minuten
+          p 23 April 2020
+      .blog-hero-image 
+        img(src="images/team-d.jpg", alt="")
+      .blog-article
+        .blog-article-text
+            p <b>Voor de wekker wakker worden. Nooit snoozen. ’s Ochtends vroeg zweten in de sportschool. Lopen naar het station. YouTube kijken in de trein. Engine Headquarters binnenhuppelen en vrolijk “hoooooooi” roepen tegen mijn collega’s. Met z’n drietjes een blokje om na de lunch. Daniël en Emmanuel die samen typetjes spelen in hilarische accenten tot de tranen over mijn wangen biggelen van het lachen. Tijdens werk soms zomaar even je stoel omdraaien naar je collega’s en random iets vertellen, levenslessen delen, iets grappigs laten zien op het wereldwijde web of even gek doen. Ik mis ‘t.</b>
+            h5 Van luipaard naar luiaard 
+            p Voor de wekker wakker worden en voor 07:00 uur al met gewichten smijten in de sportschool (laten we even negeren dat de meeste mensen me voor gek verklaren), voor mij was dat normaal. Routine, discipline, call it what you want. Het werkte, en goed ook. Fit, alert, snel, energie voor 10 – jachtluipaard Irene. Ik was echt wel even mijn motivatie kwijt toen ik ineens, net als de rest van Nederland, thuis kwam te zitten. Ik ging later naar bed, werd niet meer voor m’n wekker wakker en ging dus ook weer snoozen, skipte work-outs, en haalde way too much junkfood in huis. M’n hele dagroutine naar de maan. Luiaard Irene. Shit.
+        .blog-article-quote
+          q Ik was echt wel even mijn motivatie kwijt toen ik ineens, net als de rest van Nederland, thuis kwam te zitten.
+      .blog-article-image 
+        img(src="images/engine-aboutus.jpg", alt="")
+      .blog-article
+        .blog-article-text
+          h5 Stof die banjo eens af
+          p Tja… ik was ineens mijn ‘normaal’ kwijt. Was een beetje lost. Tot overmaat van ramp heb ik al mijn planten namen geven. Heb er nog net geen geboortekaartjes bij ontworpen. Om mezelf niet gek te maken ben ik op zoek gegaan naar nieuwe motivatie. Ik ben bijvoorbeeld gaan hardlopen. Is dit niet juist de tijd om nieuwe dingen te leren en creatief te zijn? Of je nu vloeiend Swahili wil leren spreken, of dat je na jaren de snaren van je banjo weer wilt kietelen… nú is het moment daar. Je eigen droomhuis bouwen van wc-rollen? Waarom niet, je hebt er toch genoeg. En de smoes dat je geen tijd hebt is zóóó februari 2020. 
+        .blog-article-quote
+          q Tja… ik was ineens mijn ‘normaal’ kwijt. Was een beetje lost. Tot overmaat van ramp heb ik al mijn planten namen geven.
+      .blog-article
+        .blog-article-text
+          h6 Wie het kleine niet eert… 
+          p Manieren vinden om mijn dagen nuttig te gebruiken – het lukt weer aardig. Thuis sporten, thuis werken en vanuit de huiskamer digitaal mijn vrienden opzoeken. Alles is anders, maar het is voor nu ‘the new normal’. 
+          p Ik ben mijn ‘normaal’ op kleine schaal kwijtgeraakt, maar de wereld is naar mijn idee echt volledig de kluts kwijt. Hoezeer ik ook baal van mijn verstoorde leventje, het valt natuurlijk compleet in het niet bij de enorme gezondheids- en economische problemen waar de hele wereldbevolking nu mee te maken heeft. Ik denk aan de Italianen, de Spanjaarden en ook Nederlanders die het veel slechter hebben dan ik. Dat zet mijn struggles wel in perspectief.
+          p  Niet zeuren, Ireen. Jij redt je wel. Je hebt een dak boven je hoofd en genoeg toiletpapier in de kast. Je bent gezond en je familie ook. Je hebt werk. Leuk werk. Werk dat je thuis kúnt doen. Voor nu even de tanden op elkaar. Helpen waar je helpen kan. Mopperen? Dat doe je maar weer als alles weer op (wc-)rolletjes loopt. Als de trein naar Amsterdam weer bomvol staat en de snelwegen weer vastlopen. Toekomstmuziek.
+
+  .job-slider.section
+    .container
+      .swiper.job-swiper
+        .swiper-wrapper
+          .swiper-slide
+            img(src="images/job-slider-img-1.jpg" alt="Book" width="1088" height="620")
+          .swiper-slide
+            img(src="images/job-slider-img-2.jpg" alt="Billboard" width="1088" height="620")
+          .swiper-slide
+            img(src="images/job-slider-img-3.jpg" alt="Pin" width="1088" height="620")
+        .swiper-pagination
+        .swiper-fraction
+          span.swiper-fraction-current
+          | &nbsp;/&nbsp;
+          span.swiper-fraction-total
+      .swiper-slide-link
+        a(href="/") Job done. Can we help your brand shift gears?

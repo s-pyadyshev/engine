@@ -1,0 +1,89 @@
+extends pug/base
+
+prepend vars
+  - title = 'Blogs'
+
+append vars
+
+block content
+  +page-header(
+      'Blogs',
+      'Verhalen uit de <span>werkplaats</span><span>.</span>',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel facilisis odio, ac laoreet velit. Nulla scelerisque faucibus volutpat. Donec scelerisque arcu sit amet ligula ornare dictum. Maecenas quis tristique ante, sit amet maximus orci.',
+      false,
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 40" width="126" height="46" data-scrollspy><path d="M93.29 41.55c-27.12-.27-57.94.1-82.34-13.59C5.59 24.95-1.28 19.33.92 12.32 3.36 4.58 14.58 4.01 21.2 3.07 36 .92 50.96.12 65.9.67c7.75.3 15.48 1.04 23.14 2.22 6.51 1 13.75 1.82 19.57 5.11 6.38 3.61 8.76 10.73 3.94 16.83-5.28 6.68-16.87 8.12-24.74 9.5a139.526 139.526 0 0 1-45 .53c-7.32-1.09-14.54-2.76-21.59-4.99-5.18-1.65-13.9-4.09-14.87-10.56C4.96 9.95 20.63 7.96 26.94 6.48c8.51-1.99 17.14-3.41 25.84-4.25C70.26.57 87.89 1.19 105.21 4.08" style="fill:none;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3px"/></svg>'
+    )
+  section.blogs 
+    .container.container-xl
+      ul.blogs__cards-list
+        li
+          a(href="/").blogs-card
+            img(src="images/engine_totebag.jpg", alt="")
+            .blog-card__text
+              .blog-card__text-header
+                p 19 April 2021
+                p Leestijd: 4 minuten
+              h4 Floriade
+              p A dream lives on forever
+
+        li
+          a(href="/").blogs-card
+            img(src="images/engine_totebag.jpg", alt="")
+            .blog-card__text 
+              .blog-card__text-header
+                p 2 Maart 2021
+                p Leestijd: 4 minuten
+              h4 Je kunt m’n rug op!
+              p Een brief aan de baas
+
+        li
+          a(href="/").blogs-card
+            img(src="images/close-up-people-protesting-together.jpg", alt="")
+            .blog-card__text 
+              .blog-card__text-header
+                p 28 Juli 2020
+                p Leestijd: 4 minuten
+              h4 Vers van de pers
+              p Creatief communiceren met BAM
+
+        li
+          a(href="/").blogs-card
+            img(src="images/job-slider-img-1.jpg", alt="")
+            .blog-card__text 
+              .blog-card__text-header
+                p 23 April 2020
+                p Leestijd: 4 minuten
+              h4 Toekomstmuziek
+              p Mogen we ooit nog mopperen?
+
+        li
+          a(href="/").blogs-card
+            img(src="images/engine_totebag.jpg", alt="")
+            .blog-card__text 
+              .blog-card__text-header
+                p 30 Januari 2020
+                p Leestijd: 4 minuten
+              h4 What’s in a name?
+              p Het kiezen van een bedrijfs- of merknaam is er niet eenvoudiger op geworden
+
+        li
+          a(href="/").blogs-card
+            img(src="images/close-up-people-protesting-together.jpg", alt="")
+            .blog-card__text 
+              .blog-card__text-header
+                p 23 April 2020
+                p Leestijd: 4 minuten
+              h4 “Dat geld blijft toch aan de strijkstok hangen!”
+              p Over goede doelen en kwade tongen
+
+      .pagination
+        .pagination__pages
+          h4 Pagina
+          ul.pagination-list
+            li.pagination-item
+              a.pagination-link.is-active(href="#") 1
+            li.pagination-item
+              a.pagination-link(href="#") 2
+            li.pagination-item
+              a.pagination-link(href="#") 3
+        a.pagination-link-left(href="#") Volgende pagina 
