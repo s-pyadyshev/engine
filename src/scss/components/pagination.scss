@@ -2,51 +2,103 @@ $pagination-color-current: $color-black;
 $pagination-color-hover: $color-primary;
 $pagination-gap: 12px;
 
+.pagination-link {
+  font-family: $font-secondary;
+  color: $color-white;
+  font-weight: 700;
+  font-size: 30px;
+  text-decoration: none;
+  position: relative;
+  width: 46px;
+  height: 46px;
+  font-size: 24px;
+  border-radius: 50%;
+  border: 3px solid $color-white;
+  line-height: 1.7;
+  display: block;
+  text-align: center;
+  flex-shrink: 0;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+}
+
+.pagination-link.is-active {
+  width: 62px;
+  height: 62px;
+  font-size: 32px;
+  color: $color-primary;
+  border-color: $color-primary;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
 
-  &--current {
-    color: $pagination-color-current;
-  }
-
-  &__link {
-    display: block;
-    padding-right: 8px;
-    padding-left: 8px;
-    text-align: center;
-
-    &:focus,
-    &:hover,
-    &:active {
-      color: $pagination-color-hover;
-    }
-  }
-
-  &__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: $pagination-gap;
-    list-style-type: none;
-
-    a {
-      text-decoration: none;
-    }
-  }
-
-  &__next,
-  &__prev {
-    &:focus,
-    &:hover,
-    &:active {
-      color: $pagination-color-hover;
-    }
+  @include laptop {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 
-.pagination-link--active {
-  
+.pagination__pages {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  @include laptop {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.pagination-list {
+  display: flex;
+}
+
+.pagination-list li:not(:last-child) {
+  margin-right: 32px;
+}
+
+.pagination h4 {
+  color: $color-primary;
+  font-size: 26px;
+  margin-bottom: 20px;
+
+  @include laptop {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
+
+.pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-link-left {
+  display: none;
+  color: $color-white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+  align-items: center;
+  margin-top: 20px;
+
+  @include laptop {
+    display: block;
+    margin-top: 0;
+    font-size: 24px;
+    text-align: right;
+  }
 }
