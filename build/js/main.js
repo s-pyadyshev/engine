@@ -1,11 +1,3 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -16,7 +8,39 @@
   \****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   backToTop: function() { return /* binding */ backToTop; }\n/* harmony export */ });\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers */ \"./src/js/helpers.js\");\n\nvar backToTop = function () {\n  var init = function init() {\n    var btnUp = document.querySelector(\".button--up\");\n    if (!btnUp) {\n      return;\n    }\n    btnUp.classList.add(\"is-hidden\");\n    btnUp.addEventListener(\"click\", function () {\n      window.scrollTo({\n        top: 0,\n        left: 0,\n        behavior: \"smooth\"\n      });\n    });\n    var onScroll = (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.throttle)(function () {\n      if (window.scrollY > 200) {\n        btnUp.classList.remove(\"is-hidden\");\n      } else {\n        btnUp.classList.add(\"is-hidden\");\n      }\n    }, 100);\n    document.addEventListener(\"scroll\", onScroll);\n  };\n  return {\n    init: init\n  };\n}();\n\n//# sourceURL=webpack://ninelines-template/./src/js/components/backToTop.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   backToTop: function() { return /* binding */ backToTop; }
+/* harmony export */ });
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers */ "./src/js/helpers.js");
+
+var backToTop = function () {
+  var init = function init() {
+    var btnUp = document.querySelector(".button--up");
+    if (!btnUp) {
+      return;
+    }
+    btnUp.classList.add("is-hidden");
+    btnUp.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      });
+    });
+    var onScroll = (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.throttle)(function () {
+      if (window.scrollY > 200) {
+        btnUp.classList.remove("is-hidden");
+      } else {
+        btnUp.classList.add("is-hidden");
+      }
+    }, 100);
+    document.addEventListener("scroll", onScroll);
+  };
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -26,7 +50,42 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   cardEmployeesInit: function() { return /* binding */ cardEmployeesInit; }\n/* harmony export */ });\nvar cardEmployeesInit = function () {\n  var init = function init() {\n    var cardEmployees = document.querySelector(\".card-employee-list\");\n    if (cardEmployees === null) {\n      return;\n    }\n    cardEmployees.addEventListener(\"click\", function (event) {\n      var target = event.target;\n      var toggleHoverPhoto = function toggleHoverPhoto() {\n        target.parentElement.classList.add(\"is-hidden\");\n        target.parentElement.classList.remove(\"is-visible\");\n        target.parentElement.nextElementSibling.classList.remove(\"is-hidden\");\n        target.parentElement.nextElementSibling.classList.add(\"is-visible\");\n      };\n      var togglePhoto = function togglePhoto() {\n        target.parentElement.classList.remove(\"is-visible\");\n        target.parentElement.classList.add(\"is-hidden\");\n        target.parentElement.previousElementSibling.classList.remove(\"is-hidden\");\n        target.parentElement.previousElementSibling.classList.add(\"is-visible\");\n      };\n      if (target.parentElement.classList[0] === \"card-employee__photo\") {\n        toggleHoverPhoto();\n      }\n      if (target.parentElement.classList[0] === \"card-employee__photo-hover\") {\n        togglePhoto();\n      }\n    });\n  };\n  return {\n    init: init\n  };\n}();\n\n//# sourceURL=webpack://ninelines-template/./src/js/components/cardEmployees.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   cardEmployeesInit: function() { return /* binding */ cardEmployeesInit; }
+/* harmony export */ });
+var cardEmployeesInit = function () {
+  var init = function init() {
+    var cardEmployees = document.querySelector(".card-employee-list");
+    if (cardEmployees === null) {
+      return;
+    }
+    cardEmployees.addEventListener("click", function (event) {
+      var target = event.target;
+      var toggleHoverPhoto = function toggleHoverPhoto() {
+        target.parentElement.classList.add("is-hidden");
+        target.parentElement.classList.remove("is-visible");
+        target.parentElement.nextElementSibling.classList.remove("is-hidden");
+        target.parentElement.nextElementSibling.classList.add("is-visible");
+      };
+      var togglePhoto = function togglePhoto() {
+        target.parentElement.classList.remove("is-visible");
+        target.parentElement.classList.add("is-hidden");
+        target.parentElement.previousElementSibling.classList.remove("is-hidden");
+        target.parentElement.previousElementSibling.classList.add("is-visible");
+      };
+      if (target.parentElement.classList[0] === "card-employee__photo") {
+        toggleHoverPhoto();
+      }
+      if (target.parentElement.classList[0] === "card-employee__photo-hover") {
+        togglePhoto();
+      }
+    });
+  };
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -36,7 +95,54 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   casesSlider: function() { return /* binding */ casesSlider; }\n/* harmony export */ });\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/swiper.mjs\");\n/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ \"./node_modules/swiper/modules/index.mjs\");\n\n\nvar casesSlider = function () {\n  var init = function init() {\n    var casesSwiperElement = document.querySelector(\".cases-slider\");\n    if (!casesSwiperElement) {\n      return;\n    }\n    var resizableSwiper = function resizableSwiper(breakpoint, swiperClass, swiperSettings) {\n      var casesSwiper;\n      breakpoint = window.matchMedia(breakpoint);\n      var enableSwiper = function enableSwiper(className, settings) {\n        if (document.querySelector(className)) {\n          casesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"](className, settings);\n        }\n      };\n      var checker = function checker() {\n        if (breakpoint.matches) {\n          return enableSwiper(swiperClass, swiperSettings);\n        } else {\n          if (casesSwiper !== undefined) casesSwiper.destroy(true, true);\n          return;\n        }\n      };\n      breakpoint.addEventListener(\"change\", checker);\n      checker();\n    };\n    resizableSwiper(\"(max-width: 1024px)\", \".cases-slider\", {\n      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],\n      spaceBetween: 23,\n      pagination: {\n        el: \".swiper-pagination\",\n        clickable: \"true\",\n        type: \"bullets\",\n        bulletElement: \"button\"\n      }\n    });\n  };\n  return {\n    init: init\n  };\n}();\n\n//# sourceURL=webpack://ninelines-template/./src/js/components/cases-slider.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   casesSlider: function() { return /* binding */ casesSlider; }
+/* harmony export */ });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+
+
+var casesSlider = function () {
+  var init = function init() {
+    var casesSwiperElement = document.querySelector(".cases-slider");
+    if (!casesSwiperElement) {
+      return;
+    }
+    var resizableSwiper = function resizableSwiper(breakpoint, swiperClass, swiperSettings) {
+      var casesSwiper;
+      breakpoint = window.matchMedia(breakpoint);
+      var enableSwiper = function enableSwiper(className, settings) {
+        if (document.querySelector(className)) {
+          casesSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](className, settings);
+        }
+      };
+      var checker = function checker() {
+        if (breakpoint.matches) {
+          return enableSwiper(swiperClass, swiperSettings);
+        } else {
+          if (casesSwiper !== undefined) casesSwiper.destroy(true, true);
+          return;
+        }
+      };
+      breakpoint.addEventListener("change", checker);
+      checker();
+    };
+    resizableSwiper("(max-width: 1024px)", ".cases-slider", {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+      spaceBetween: 23,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: "true",
+        type: "bullets",
+        bulletElement: "button"
+      }
+    });
+  };
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -46,7 +152,49 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   clientsSlider: function() { return /* binding */ clientsSlider; }\n/* harmony export */ });\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/swiper.mjs\");\n/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ \"./node_modules/swiper/modules/index.mjs\");\n\n\nvar clientsSlider = function () {\n  var init = function init() {\n    var clientsSwiperElement = document.querySelector(\".clients-swiper\");\n    if (!clientsSwiperElement) {\n      return;\n    }\n    var clientsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\".clients-swiper\", {\n      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay],\n      spaceBetween: 20,\n      slidesPerView: 2,\n      followFinger: false,\n      loop: true,\n      breakpoints: {\n        640: {\n          spaceBetween: 80,\n          slidesPerView: 3\n        },\n        960: {\n          spaceBetween: 40,\n          slidesPerView: 4\n        },\n        1280: {\n          spaceBetween: 160,\n          slidesPerView: 5\n        }\n      },\n      autoplay: {\n        delay: 4000\n      }\n    });\n  };\n  return {\n    init: init\n  };\n}();\n\n//# sourceURL=webpack://ninelines-template/./src/js/components/clients-slider.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   clientsSlider: function() { return /* binding */ clientsSlider; }
+/* harmony export */ });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+
+
+var clientsSlider = function () {
+  var init = function init() {
+    var clientsSwiperElement = document.querySelector(".clients-swiper");
+    if (!clientsSwiperElement) {
+      return;
+    }
+    var clientsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".clients-swiper", {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay],
+      spaceBetween: 20,
+      slidesPerView: 2,
+      followFinger: false,
+      loop: true,
+      breakpoints: {
+        640: {
+          spaceBetween: 80,
+          slidesPerView: 3
+        },
+        960: {
+          spaceBetween: 40,
+          slidesPerView: 4
+        },
+        1280: {
+          spaceBetween: 160,
+          slidesPerView: 5
+        }
+      },
+      autoplay: {
+        delay: 4000
+      }
+    });
+  };
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -56,7 +204,61 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   heroSlider: function() { return /* binding */ heroSlider; }\n/* harmony export */ });\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/swiper.mjs\");\n/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ \"./node_modules/swiper/modules/index.mjs\");\n\n\nvar heroSlider = function () {\n  var init = function init() {\n    var heroSwiperElement = document.querySelector(\".hero-swiper\");\n    if (!heroSwiperElement) {\n      return;\n    }\n    var progressBar = document.querySelector(\".hero-slider-progress\");\n    var heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\".hero-swiper\", {\n      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],\n      spaceBetween: 20,\n      slidesPerView: \"auto\",\n      followFinger: false,\n      breakpoints: {\n        1025: {\n          spaceBetween: 0,\n          rewind: true\n        }\n      },\n      pagination: {\n        el: \".swiper-pagination\",\n        clickable: \"true\",\n        type: \"bullets\",\n        bulletElement: \"button\"\n      },\n      autoplay: {\n        delay: 4000\n      },\n      on: {\n        init: function init() {\n          progressBar.style.animation = \"fillBackground 4s\";\n          setTimeout(function () {\n            progressBar.style.animation = \"none\";\n          }, 3950);\n        },\n        beforeSlideChangeStart: function beforeSlideChangeStart() {\n          progressBar.style.animation = \"fillBackground 4s\";\n          setTimeout(function () {\n            progressBar.style.animation = \"none\";\n          }, 3950);\n        }\n      }\n    });\n  };\n  return {\n    init: init\n  };\n}();\n\n//# sourceURL=webpack://ninelines-template/./src/js/components/hero-slider.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   heroSlider: function() { return /* binding */ heroSlider; }
+/* harmony export */ });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+
+
+var heroSlider = function () {
+  var init = function init() {
+    var heroSwiperElement = document.querySelector(".hero-swiper");
+    if (!heroSwiperElement) {
+      return;
+    }
+    var progressBar = document.querySelector(".hero-slider-progress");
+    var heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".hero-swiper", {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+      spaceBetween: 20,
+      slidesPerView: "auto",
+      followFinger: false,
+      breakpoints: {
+        1025: {
+          spaceBetween: 0,
+          rewind: true
+        }
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: "true",
+        type: "bullets",
+        bulletElement: "button"
+      },
+      autoplay: {
+        delay: 4000
+      },
+      on: {
+        init: function init() {
+          progressBar.style.animation = "fillBackground 4s";
+          setTimeout(function () {
+            progressBar.style.animation = "none";
+          }, 3950);
+        },
+        beforeSlideChangeStart: function beforeSlideChangeStart() {
+          progressBar.style.animation = "fillBackground 4s";
+          setTimeout(function () {
+            progressBar.style.animation = "none";
+          }, 3950);
+        }
+      }
+    });
+  };
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -66,7 +268,102 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   jobSlider: function() { return /* binding */ jobSlider; }\n/* harmony export */ });\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/swiper.mjs\");\n/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ \"./node_modules/swiper/modules/index.mjs\");\n\n\nvar jobSlider = function () {\n  var init = function init() {\n    var jobSwiperElement = document.querySelector(\".job-swiper\");\n    if (!jobSwiperElement) {\n      return;\n    }\n    var jobSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\".job-swiper\", {\n      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Mousewheel, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Keyboard],\n      spaceBetween: 20,\n      slidesPerView: \"auto\",\n      centeredSlides: \"auto\",\n      breakpoints: {\n        1025: {\n          spaceBetween: 30,\n          freeMode: {\n            enabled: true,\n            sticky: false,\n            momentumBounce: false\n          },\n          mousewheel: {\n            eventsTarget: \".job-slider\"\n          }\n        }\n      },\n      pagination: {\n        el: \".swiper-pagination\",\n        type: \"progressbar\",\n        clickable: true\n      },\n      keyboard: {\n        enabled: true\n      }\n    });\n    var observerOptions = {\n      root: null,\n      threshold: 1\n    };\n    var observer = new IntersectionObserver(handleIntersection, observerOptions);\n    var swiperContainer = document.querySelector(\".job-slider\");\n    observer.observe(swiperContainer);\n    function handleIntersection(entries, _observer) {\n      if (entries[0].isIntersecting === true) if (!jobSwiper.isEnd || !jobSwiper.isBeginning) {\n        jobSwiper.mousewheel.enable();\n      }\n    }\n    jobSwiper.on(\"reachEnd\", function () {\n      jobSwiper.mousewheel.disable();\n      if (window.innerWidth < 768 && jobSwiper.activeIndex + 1 === jobSwiper.slides.length - 1) {\n        setTimeout(function () {\n          jobSwiper.setTranslate(jobSwiper.getTranslate() + -170);\n        }, 500);\n      }\n    });\n    jobSwiper.on(\"reachBeginning\", function () {\n      jobSwiper.mousewheel.disable();\n    });\n    var currentFraction = document.querySelector(\".swiper-fraction-current\");\n    var totalFraction = document.querySelector(\".swiper-fraction-total\");\n    if (jobSwiper.slides.length >= 10) {\n      totalFraction.textContent = jobSwiper.slides.length - 1;\n      currentFraction.textContent = \"0\" + (jobSwiper.activeIndex + 1).toString();\n    } else {\n      totalFraction.textContent = \"0\".concat(jobSwiper.slides.length);\n      currentFraction.textContent = \"0\" + (jobSwiper.activeIndex + 1).toString();\n    }\n    jobSwiper.on(\"slideChange\", function () {\n      if (jobSwiper.activeIndex === 0 || jobSwiper.activeIndex + 1 >= jobSwiper.slides.length - 1) if (jobSwiper.slides.length >= 10) {\n        currentFraction.textContent = \"0\" + jobSwiper.activeIndex.toString();\n        if (jobSwiper.activeIndex + 1 >= 10) {\n          var arrCurrentFraction = [];\n          arrCurrentFraction = currentFraction.textContent.split(\"\");\n          arrCurrentFraction.shift();\n          currentFraction.textContent = arrCurrentFraction.join(\"\");\n        }\n      } else {\n        currentFraction.textContent = \"0\" + (jobSwiper.activeIndex + 1).toString();\n      }\n      if (currentFraction.textContent == totalFraction.textContent) {\n        currentFraction.classList.add(\"disabled\");\n      } else {\n        currentFraction.classList.remove(\"disabled\");\n      }\n    });\n  };\n  return {\n    init: init\n  };\n}();\n\n//# sourceURL=webpack://ninelines-template/./src/js/components/job-slider.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   jobSlider: function() { return /* binding */ jobSlider; }
+/* harmony export */ });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+
+
+var jobSlider = function () {
+  var init = function init() {
+    var jobSwiperElement = document.querySelector(".job-swiper");
+    if (!jobSwiperElement) {
+      return;
+    }
+    var jobSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".job-swiper", {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Mousewheel, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Keyboard],
+      spaceBetween: 20,
+      slidesPerView: "auto",
+      centeredSlides: "auto",
+      breakpoints: {
+        1025: {
+          spaceBetween: 30,
+          freeMode: {
+            enabled: true,
+            sticky: false,
+            momentumBounce: false
+          },
+          mousewheel: {
+            eventsTarget: ".job-slider"
+          }
+        }
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+        clickable: true
+      },
+      keyboard: {
+        enabled: true
+      }
+    });
+    var observerOptions = {
+      root: null,
+      threshold: 1
+    };
+    var observer = new IntersectionObserver(handleIntersection, observerOptions);
+    var swiperContainer = document.querySelector(".job-slider");
+    observer.observe(swiperContainer);
+    function handleIntersection(entries, _observer) {
+      if (entries[0].isIntersecting === true) if (!jobSwiper.isEnd || !jobSwiper.isBeginning) {
+        jobSwiper.mousewheel.enable();
+      }
+    }
+    jobSwiper.on("reachEnd", function () {
+      jobSwiper.mousewheel.disable();
+      if (window.innerWidth < 768 && jobSwiper.activeIndex + 1 === jobSwiper.slides.length - 1) {
+        setTimeout(function () {
+          jobSwiper.setTranslate(jobSwiper.getTranslate() + -170);
+        }, 500);
+      }
+    });
+    jobSwiper.on("reachBeginning", function () {
+      jobSwiper.mousewheel.disable();
+    });
+    var currentFraction = document.querySelector(".swiper-fraction-current");
+    var totalFraction = document.querySelector(".swiper-fraction-total");
+    if (jobSwiper.slides.length >= 10) {
+      totalFraction.textContent = jobSwiper.slides.length - 1;
+      currentFraction.textContent = "0" + (jobSwiper.activeIndex + 1).toString();
+    } else {
+      totalFraction.textContent = "0".concat(jobSwiper.slides.length);
+      currentFraction.textContent = "0" + (jobSwiper.activeIndex + 1).toString();
+    }
+    jobSwiper.on("slideChange", function () {
+      if (jobSwiper.activeIndex === 0 || jobSwiper.activeIndex + 1 >= jobSwiper.slides.length - 1) if (jobSwiper.slides.length >= 10) {
+        currentFraction.textContent = "0" + jobSwiper.activeIndex.toString();
+        if (jobSwiper.activeIndex + 1 >= 10) {
+          var arrCurrentFraction = [];
+          arrCurrentFraction = currentFraction.textContent.split("");
+          arrCurrentFraction.shift();
+          currentFraction.textContent = arrCurrentFraction.join("");
+        }
+      } else {
+        currentFraction.textContent = "0" + (jobSwiper.activeIndex + 1).toString();
+      }
+      if (currentFraction.textContent == totalFraction.textContent) {
+        currentFraction.classList.add("disabled");
+      } else {
+        currentFraction.classList.remove("disabled");
+      }
+    });
+  };
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -76,7 +373,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   mobileMenu: function() { return /* binding */ mobileMenu; }\n/* harmony export */ });\nvar mobileMenu = function () {\n  var init = function init() {\n    var mobileMenuOpen = document.querySelector(\".js-open-menu\");\n    if (!mobileMenuOpen) {\n      return;\n    }\n    var mobileMenuClose = document.querySelector(\".js-close-menu\");\n    var body = document.querySelector(\"body\");\n    mobileMenuOpen.addEventListener(\"click\", function () {\n      body.classList.toggle(\"mobile-menu-active\");\n      mobileMenuClose.focus();\n    });\n    mobileMenuClose.addEventListener(\"click\", function () {\n      body.classList.toggle(\"mobile-menu-active\");\n    });\n  };\n  return {\n    init: init\n  };\n}();\n\n//# sourceURL=webpack://ninelines-template/./src/js/components/mobile-menu.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   mobileMenu: function() { return /* binding */ mobileMenu; }
+/* harmony export */ });
+var mobileMenu = function () {
+  var init = function init() {
+    var mobileMenuOpen = document.querySelector(".js-open-menu");
+    if (!mobileMenuOpen) {
+      return;
+    }
+    var mobileMenuClose = document.querySelector(".js-close-menu");
+    var body = document.querySelector("body");
+    mobileMenuOpen.addEventListener("click", function () {
+      body.classList.toggle("mobile-menu-active");
+      mobileMenuClose.focus();
+    });
+    mobileMenuClose.addEventListener("click", function () {
+      body.classList.toggle("mobile-menu-active");
+    });
+  };
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -86,7 +406,34 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   permutation: function() { return /* binding */ permutation; }\n/* harmony export */ });\nvar permutation = function () {\n  var init = function init() {\n    var textBlock = document.querySelector(\".main-cases__text\");\n    var swiperWrapper = document.querySelector(\".cases-slider .swiper-wrapper\");\n    var firstPlace = document.querySelector(\".main-cases .container\");\n    if (!textBlock) {\n      return;\n    }\n    var replaceBlock = function replaceBlock() {\n      if (window.innerWidth >= 1025) {\n        swiperWrapper.append(textBlock);\n      } else if (window.innerWidth > 320 && window.innerWidth < 1025) {\n        firstPlace.prepend(textBlock);\n      }\n    };\n    replaceBlock();\n    window.addEventListener(\"resize\", function () {\n      replaceBlock();\n    });\n  };\n  return {\n    init: init\n  };\n}();\n\n//# sourceURL=webpack://ninelines-template/./src/js/components/permutation.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   permutation: function() { return /* binding */ permutation; }
+/* harmony export */ });
+var permutation = function () {
+  var init = function init() {
+    var textBlock = document.querySelector(".main-cases__text");
+    var swiperWrapper = document.querySelector(".cases-slider .swiper-wrapper");
+    var firstPlace = document.querySelector(".main-cases .container");
+    if (!textBlock) {
+      return;
+    }
+    var replaceBlock = function replaceBlock() {
+      if (window.innerWidth >= 1025) {
+        swiperWrapper.append(textBlock);
+      } else if (window.innerWidth > 320 && window.innerWidth < 1025) {
+        firstPlace.prepend(textBlock);
+      }
+    };
+    replaceBlock();
+    window.addEventListener("resize", function () {
+      replaceBlock();
+    });
+  };
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -96,7 +443,38 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   scrollspy: function() { return /* binding */ scrollspy; }\n/* harmony export */ });\n/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers */ \"./src/js/helpers.js\");\n\nvar applyScrollspyClasses = function applyScrollspyClasses(elements) {\n  elements.forEach(function (element) {\n    if ((0,_helpers__WEBPACK_IMPORTED_MODULE_0__.isElementInViewport)(element)) {\n      var animationClass = element.dataset.scrollspy;\n      element.classList.add(\"animate__animated\");\n      if (animationClass) {\n        element.classList.add(animationClass);\n      }\n    }\n  });\n};\nvar scrollspy = function () {\n  var init = function init() {\n    var scrollspyElements = document.querySelectorAll(\"[data-scrollspy]\");\n    if (!scrollspyElements.length) {\n      return;\n    }\n    applyScrollspyClasses(scrollspyElements);\n    document.addEventListener(\"scroll\", (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.throttle)(function () {\n      applyScrollspyClasses(scrollspyElements);\n    }, 500));\n  };\n  return {\n    init: init\n  };\n}();\n\n//# sourceURL=webpack://ninelines-template/./src/js/components/scrollspy.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   scrollspy: function() { return /* binding */ scrollspy; }
+/* harmony export */ });
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../helpers */ "./src/js/helpers.js");
+
+var applyScrollspyClasses = function applyScrollspyClasses(elements) {
+  elements.forEach(function (element) {
+    if ((0,_helpers__WEBPACK_IMPORTED_MODULE_0__.isElementInViewport)(element)) {
+      var animationClass = element.dataset.scrollspy;
+      element.classList.add("animate__animated");
+      if (animationClass) {
+        element.classList.add(animationClass);
+      }
+    }
+  });
+};
+var scrollspy = function () {
+  var init = function init() {
+    var scrollspyElements = document.querySelectorAll("[data-scrollspy]");
+    if (!scrollspyElements.length) {
+      return;
+    }
+    applyScrollspyClasses(scrollspyElements);
+    document.addEventListener("scroll", (0,_helpers__WEBPACK_IMPORTED_MODULE_0__.throttle)(function () {
+      applyScrollspyClasses(scrollspyElements);
+    }, 500));
+  };
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -106,7 +484,47 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   tabs: function() { return /* binding */ tabs; }\n/* harmony export */ });\nvar tabs = function () {\n  var init = function init() {\n    var tabContainers = document.querySelectorAll(\"[data-tabs]\");\n    if (!tabContainers.length) {\n      return;\n    }\n    tabContainers.forEach(function (tabContainer) {\n      var currentTab = tabContainer.getAttribute(\"data-tabs\");\n      tabContainer.addEventListener(\"click\", function (event) {\n        var target = event.target;\n        if (!target.hasAttribute(\"data-tab\")) {\n          return;\n        }\n        var tabButton = target;\n        var tabId = tabButton.getAttribute(\"data-tab\");\n        var matchingTabDataAll = document.querySelectorAll(\"[data-tabs-content=\\\"\".concat(currentTab, \"\\\"] > [data-tab-content]\"));\n        var matchingTabData = document.querySelector(\"[data-tabs-content=\\\"\".concat(currentTab, \"\\\"] > [data-tab-content=\\\"\").concat(tabId, \"\\\"]\"));\n        var activeTabContent = document.querySelector(\"[data-tabs-content=\\\"\".concat(currentTab, \"\\\"] > [data-tab-content].is-active\"));\n        var activeTabButton = document.querySelector(\"[data-tabs=\".concat(currentTab, \"] > button.is-active\"));\n        var tabButtonAll = document.querySelectorAll(\"[data-tabs=\".concat(currentTab, \"] > button\"));\n        matchingTabDataAll.forEach(function (item) {\n          return item.classList.remove(\"is-active\");\n        });\n        activeTabContent.classList.remove(\"is-active\");\n        activeTabButton.classList.remove(\"is-active\");\n        tabButtonAll.forEach(function (item) {\n          return item.classList.remove(\"is-active\");\n        });\n        matchingTabData.classList.add(\"is-active\");\n        tabButton.classList.add(\"is-active\");\n      });\n    });\n  };\n  return {\n    init: init\n  };\n}();\n\n//# sourceURL=webpack://ninelines-template/./src/js/components/tabs.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   tabs: function() { return /* binding */ tabs; }
+/* harmony export */ });
+var tabs = function () {
+  var init = function init() {
+    var tabContainers = document.querySelectorAll("[data-tabs]");
+    if (!tabContainers.length) {
+      return;
+    }
+    tabContainers.forEach(function (tabContainer) {
+      var currentTab = tabContainer.getAttribute("data-tabs");
+      tabContainer.addEventListener("click", function (event) {
+        var target = event.target;
+        if (!target.hasAttribute("data-tab")) {
+          return;
+        }
+        var tabButton = target;
+        var tabId = tabButton.getAttribute("data-tab");
+        var matchingTabDataAll = document.querySelectorAll("[data-tabs-content=\"".concat(currentTab, "\"] > [data-tab-content]"));
+        var matchingTabData = document.querySelector("[data-tabs-content=\"".concat(currentTab, "\"] > [data-tab-content=\"").concat(tabId, "\"]"));
+        var activeTabContent = document.querySelector("[data-tabs-content=\"".concat(currentTab, "\"] > [data-tab-content].is-active"));
+        var activeTabButton = document.querySelector("[data-tabs=".concat(currentTab, "] > button.is-active"));
+        var tabButtonAll = document.querySelectorAll("[data-tabs=".concat(currentTab, "] > button"));
+        matchingTabDataAll.forEach(function (item) {
+          return item.classList.remove("is-active");
+        });
+        activeTabContent.classList.remove("is-active");
+        activeTabButton.classList.remove("is-active");
+        tabButtonAll.forEach(function (item) {
+          return item.classList.remove("is-active");
+        });
+        matchingTabData.classList.add("is-active");
+        tabButton.classList.add("is-active");
+      });
+    });
+  };
+  return {
+    init: init
+  };
+}();
 
 /***/ }),
 
@@ -116,7 +534,74 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   debounce: function() { return /* binding */ debounce; },\n/* harmony export */   isElementCompletelyInViewport: function() { return /* binding */ isElementCompletelyInViewport; },\n/* harmony export */   isElementInViewport: function() { return /* binding */ isElementInViewport; },\n/* harmony export */   throttle: function() { return /* binding */ throttle; }\n/* harmony export */ });\nfunction debounce(func, wait) {\n  var timeout;\n  return function () {\n    var _arguments = arguments,\n      _this = this;\n    if (timeout) {\n      clearTimeout(timeout);\n    }\n    timeout = setTimeout(function () {\n      func.apply(_this, _arguments);\n    }, wait);\n  };\n}\n\n// const onType = debounce(() => {\n//   // send request\n// }, 500);\n\n// const searchField = document.querySelector(\"#searchField\");\n\n// searchField.addEventListener(\"keydown\", onType);\n\nfunction throttle(func, wait) {\n  var waiting = false;\n  return function () {\n    var _arguments2 = arguments,\n      _this2 = this;\n    if (waiting) {\n      return;\n    }\n    waiting = true;\n    setTimeout(function () {\n      func.apply(_this2, _arguments2);\n      waiting = false;\n    }, wait);\n  };\n}\n\n// Usage\n// const onScroll = throttle(() => {}, 100);\n\n// document.addEventListener(\"scroll\", onScroll);\n\nfunction isElementInViewport(element) {\n  var rect = element.getBoundingClientRect();\n  var windowHeight = window.innerHeight || document.documentElement.clientHeight;\n  var windowWidth = window.innerWidth || document.documentElement.clientWidth;\n  var vertInView = rect.top <= windowHeight && rect.top + rect.height >= 0;\n  var horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;\n  return vertInView && horInView;\n}\nfunction isElementCompletelyInViewport(element) {\n  var coordinates = element.getBoundingClientRect();\n  if (coordinates.right > window.innerWidth || coordinates.bottom > window.innerHeight) {\n    return false;\n  }\n  if (coordinates.top < 0 || coordinates.left < 0) {\n    return false;\n  }\n  return true;\n}\n\n//# sourceURL=webpack://ninelines-template/./src/js/helpers.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   debounce: function() { return /* binding */ debounce; },
+/* harmony export */   isElementCompletelyInViewport: function() { return /* binding */ isElementCompletelyInViewport; },
+/* harmony export */   isElementInViewport: function() { return /* binding */ isElementInViewport; },
+/* harmony export */   throttle: function() { return /* binding */ throttle; }
+/* harmony export */ });
+function debounce(func, wait) {
+  var timeout;
+  return function () {
+    var _arguments = arguments,
+      _this = this;
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(function () {
+      func.apply(_this, _arguments);
+    }, wait);
+  };
+}
+
+// const onType = debounce(() => {
+//   // send request
+// }, 500);
+
+// const searchField = document.querySelector("#searchField");
+
+// searchField.addEventListener("keydown", onType);
+
+function throttle(func, wait) {
+  var waiting = false;
+  return function () {
+    var _arguments2 = arguments,
+      _this2 = this;
+    if (waiting) {
+      return;
+    }
+    waiting = true;
+    setTimeout(function () {
+      func.apply(_this2, _arguments2);
+      waiting = false;
+    }, wait);
+  };
+}
+
+// Usage
+// const onScroll = throttle(() => {}, 100);
+
+// document.addEventListener("scroll", onScroll);
+
+function isElementInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+  var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+  var vertInView = rect.top <= windowHeight && rect.top + rect.height >= 0;
+  var horInView = rect.left <= windowWidth && rect.left + rect.width >= 0;
+  return vertInView && horInView;
+}
+function isElementCompletelyInViewport(element) {
+  var coordinates = element.getBoundingClientRect();
+  if (coordinates.right > window.innerWidth || coordinates.bottom > window.innerHeight) {
+    return false;
+  }
+  if (coordinates.top < 0 || coordinates.left < 0) {
+    return false;
+  }
+  return true;
+}
 
 /***/ }),
 
@@ -126,7 +611,40 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_mobile_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/mobile-menu */ \"./src/js/components/mobile-menu.js\");\n/* harmony import */ var _components_hero_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/hero-slider */ \"./src/js/components/hero-slider.js\");\n/* harmony import */ var _components_clients_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/clients-slider */ \"./src/js/components/clients-slider.js\");\n/* harmony import */ var _components_permutation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/permutation */ \"./src/js/components/permutation.js\");\n/* harmony import */ var _components_cases_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/cases-slider */ \"./src/js/components/cases-slider.js\");\n/* harmony import */ var _components_job_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/job-slider */ \"./src/js/components/job-slider.js\");\n/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabs */ \"./src/js/components/tabs.js\");\n/* harmony import */ var _components_scrollspy__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/scrollspy */ \"./src/js/components/scrollspy.js\");\n/* harmony import */ var _components_backToTop__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/backToTop */ \"./src/js/components/backToTop.js\");\n/* harmony import */ var _components_cardEmployees__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/cardEmployees */ \"./src/js/components/cardEmployees.js\");\n\n\n\n\n\n\n\n\n\n\nwindow.addEventListener(\"load\", function () {\n  _components_mobile_menu__WEBPACK_IMPORTED_MODULE_0__.mobileMenu.init();\n  _components_hero_slider__WEBPACK_IMPORTED_MODULE_1__.heroSlider.init();\n  _components_clients_slider__WEBPACK_IMPORTED_MODULE_2__.clientsSlider.init();\n  _components_cases_slider__WEBPACK_IMPORTED_MODULE_4__.casesSlider.init();\n  _components_job_slider__WEBPACK_IMPORTED_MODULE_5__.jobSlider.init();\n  _components_permutation__WEBPACK_IMPORTED_MODULE_3__.permutation.init();\n  _components_tabs__WEBPACK_IMPORTED_MODULE_6__.tabs.init();\n  _components_scrollspy__WEBPACK_IMPORTED_MODULE_7__.scrollspy.init();\n  _components_backToTop__WEBPACK_IMPORTED_MODULE_8__.backToTop.init();\n  _components_cardEmployees__WEBPACK_IMPORTED_MODULE_9__.cardEmployeesInit.init();\n  document.querySelector(\"body\").classList.add(\"page-loaded\");\n}, false);\n\n//# sourceURL=webpack://ninelines-template/./src/js/main.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_mobile_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/mobile-menu */ "./src/js/components/mobile-menu.js");
+/* harmony import */ var _components_hero_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/hero-slider */ "./src/js/components/hero-slider.js");
+/* harmony import */ var _components_clients_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/clients-slider */ "./src/js/components/clients-slider.js");
+/* harmony import */ var _components_permutation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/permutation */ "./src/js/components/permutation.js");
+/* harmony import */ var _components_cases_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/cases-slider */ "./src/js/components/cases-slider.js");
+/* harmony import */ var _components_job_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/job-slider */ "./src/js/components/job-slider.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_scrollspy__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/scrollspy */ "./src/js/components/scrollspy.js");
+/* harmony import */ var _components_backToTop__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/backToTop */ "./src/js/components/backToTop.js");
+/* harmony import */ var _components_cardEmployees__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/cardEmployees */ "./src/js/components/cardEmployees.js");
+
+
+
+
+
+
+
+
+
+
+window.addEventListener("load", function () {
+  _components_mobile_menu__WEBPACK_IMPORTED_MODULE_0__.mobileMenu.init();
+  _components_hero_slider__WEBPACK_IMPORTED_MODULE_1__.heroSlider.init();
+  _components_clients_slider__WEBPACK_IMPORTED_MODULE_2__.clientsSlider.init();
+  _components_cases_slider__WEBPACK_IMPORTED_MODULE_4__.casesSlider.init();
+  _components_job_slider__WEBPACK_IMPORTED_MODULE_5__.jobSlider.init();
+  _components_permutation__WEBPACK_IMPORTED_MODULE_3__.permutation.init();
+  _components_tabs__WEBPACK_IMPORTED_MODULE_6__.tabs.init();
+  _components_scrollspy__WEBPACK_IMPORTED_MODULE_7__.scrollspy.init();
+  _components_backToTop__WEBPACK_IMPORTED_MODULE_8__.backToTop.init();
+  _components_cardEmployees__WEBPACK_IMPORTED_MODULE_9__.cardEmployeesInit.init();
+  document.querySelector("body").classList.add("page-loaded");
+}, false);
 
 /***/ })
 
