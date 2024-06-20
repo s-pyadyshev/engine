@@ -498,6 +498,18 @@ var tabs = function () {
       var currentTab = tabContainer.getAttribute("data-tabs");
       tabContainer.addEventListener("click", function (event) {
         var target = event.target;
+        if (target.parentElement.getAttribute("data-tabs") === "tabs-services") {
+          var childTabs = document.querySelector("[data-tab-content=".concat(target.getAttribute("data-tab"), "]")).querySelectorAll(".service__footer button");
+          childTabs.forEach(function (item) {
+            return item.classList.remove("is-active");
+          });
+          childTabs[0].classList.add("is-active");
+          var childTabsContent = document.querySelector("[data-tab-content=".concat(target.getAttribute("data-tab"), "]")).querySelector(".service__content").nextElementSibling.querySelectorAll("[data-tab-content]");
+          childTabsContent.forEach(function (item) {
+            return item.classList.remove("is-active");
+          });
+          childTabsContent[0].classList.add("is-active");
+        }
         if (!target.hasAttribute("data-tab")) {
           return;
         }

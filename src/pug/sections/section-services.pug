@@ -31,7 +31,23 @@ section.section.section-services.background-secondary
                 img(src="images/project2.jpg") 
                 a(href="/").service__link.text-default="View case study"
       div(data-tab-content="graphicdesign")
-        div Tab 2
+        .service
+          .service__content
+            h3="Graphic design"
+            p=`Businesses need branding. Fact. Well considered and correct branding can set a business apart from its competitors, promote products and services in the eyes of consumers, cultivate brand loyalty to retain customers, and bolster competitive advantage in crowded markets.`
+            p="But to achieve that, branding needs to be built on individuality. So, that’s where we come in. At Engine we’re a branding agency with an ethos to take the uniqueness of every business, elevate it, and then let it communicate its value to the world."
+            h4="Related case studies:"
+            .service__footer.link-more(data-tabs="tabs1")
+              button(data-tab="project011").is-active Zilter Makelaardij
+              button(data-tab="project022") Wiko Dakkapellen
+          .service__img-wrap
+            div(data-tabs-content="tabs1")
+              div.is-active(data-tab-content="project011")
+                img(src="images/project3.jpg")
+                a(href="/").service__link="View case study"
+              div(data-tab-content="project022")
+                img(src="images/project2.jpg") 
+                a(href="/").service__link.text-default="View case study"
       div(data-tab-content="webdesign")
         div Tab 3
       div(data-tab-content="uxui")

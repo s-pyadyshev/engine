@@ -12,6 +12,32 @@ export const tabs = (() => {
       tabContainer.addEventListener("click", (event) => {
         const target = event.target;
 
+        if (
+          target.parentElement.getAttribute("data-tabs") === "tabs-services"
+        ) {
+          const childTabs = document
+            .querySelector(
+              `[data-tab-content=${target.getAttribute("data-tab")}]`
+            )
+            .querySelectorAll(".service__footer button");
+          childTabs.forEach((item) => item.classList.remove("is-active"));
+
+          childTabs[0].classList.add("is-active");
+
+          const childTabsContent = document
+            .querySelector(
+              `[data-tab-content=${target.getAttribute("data-tab")}]`
+            )
+            .querySelector(".service__content")
+            .nextElementSibling.querySelectorAll("[data-tab-content]");
+
+          childTabsContent.forEach((item) =>
+            item.classList.remove("is-active")
+          );
+
+          childTabsContent[0].classList.add("is-active");
+        }
+
         if (!target.hasAttribute("data-tab")) {
           return;
         }
